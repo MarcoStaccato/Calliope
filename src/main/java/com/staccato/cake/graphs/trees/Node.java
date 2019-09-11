@@ -2,7 +2,7 @@ package com.staccato.cake.graphs.trees;
 
 public class Node {
 
-    public int value;
+    public Integer value;
 
     public Node left;
 
@@ -44,5 +44,17 @@ public class Node {
         inorder(node.left);
         System.out.print(node.value + ", ");
         inorder(node.right);
+    }
+
+    public void preorder() {
+        preorder(this);
+        System.out.println("");
+    }
+
+    private void preorder(Node node) {
+        if(node == null) return;
+        System.out.print(node.value + ", ");
+        preorder(node.left);
+        preorder(node.right);
     }
 }

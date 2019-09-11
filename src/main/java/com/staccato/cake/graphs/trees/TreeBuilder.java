@@ -21,7 +21,7 @@ public class TreeBuilder {
     public static Node BuildUnBalancedTree(){
         Node root = new Node(6);
 
-        for (int i = 0; i < 14; i++) {
+        for (int i = 0; i < 30; i++) {
             root.add(ThreadLocalRandom.current().nextInt(20));
         }
 
